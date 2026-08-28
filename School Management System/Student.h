@@ -1,41 +1,25 @@
 #pragma once
 #include "Person.h"
-
 class Student :
     public Person
 {
 private:
-    string gradeLevel;
-    float GPA;
+    string University;
 public:
-    Student() {
-        gradeLevel = "No Grade Level";
-        GPA = 0;
+    void setUniversity(string University) {
+        this->University = University;
     }
-    void setGradeLevel(string gradeLevel) {
-        this->gradeLevel = gradeLevel;
-    }
-    void setGPA(float GPA) {
-        this->GPA = GPA;
-    }
-    string getGradeLevel() {
-        return gradeLevel;
-    }
-    float getGPA() {
-        return GPA;
+    string getUniversity() {
+        return University;
     }
     void information() {
         Person::information();
-        cout << "Enter Grade Level: ";
-        cin >> gradeLevel;
-        cout << "Enter GPA: ";
-        cin >> GPA; 
+        cout << "Enter your University: ";
+        cin >> University;
     }
     void print() {
         Person::print();
-        cout << "Grade Level: " << gradeLevel << endl;
-        cout << "GPA: " << GPA << endl;
+        cout << "The University is: " << University << endl;
     }
-    //friend void printOneStudent(int studentID);
 };
 
