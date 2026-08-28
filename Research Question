@@ -1,0 +1,19 @@
+The Purpose of Static Members in OOPIn Object-Oriented Programming (OOP), the static keyword is used to define variables
+or methods that belong to the class itself rather than to any specific instance (object) created from that class.
+This means that a static member is shared globally by all instances, and memory for it is allocated only once when the class is loaded.
+Key Advantages of Using Static Members:
+1. Memory EfficiencyDescription: 
+Instead of allocating new memory for every single object created, only one copy of the static member exists in memory, 
+which is shared by all instances.
+Example: If you have a Student class where every student goes to the same university, 
+storing the universityName as a regular variable would waste memory by duplicating the same text for thousands of students. 
+Making it static ensures it is stored only once.
+2. Shared Data and CommunicationDescription: 
+Static variables act as a shared communication bridge between all objects of the same class. 
+Any change made to a static variable by one object is instantly visible to all other objects.
+Example: A common use case is creating an object counter. By incrementing a static variable inside the class constructor, 
+you can accurately track exactly how many instances of that class have been created across the entire program.
+3. Access Without InstantiationDescription: 
+Static methods can be called directly using the class name without the need to create or instantiate an object using the new keyword.
+Example: Utility methods, such as mathematical functions (e.g., Math.sqrt() in Java or C#), are defined as static 
+because they perform operations purely based on their inputs and do not require object data to function.
